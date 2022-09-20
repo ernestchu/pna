@@ -14,10 +14,34 @@ a,
   color: hsla(210, 100%, 40%, 1);
   transition: 0.4s;
 }
-
+:root {
+  --color-text: #000;
+  --color-heading: #000;
+  --color-background: #fff;
+}
 @media (hover: hover) {
   a:hover {
     background-color: hsla(210, 100%, 40%, 0.2);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  a,
+  .green {
+    text-decoration: none;
+    color: hsla(209, 100%, 58%, 1);
+    transition: 0.4s;
+  }
+  :root {
+    --color-text: #fff;
+    --color-heading: #fff;
+    --color-background: #000;
+  }
+}
+@media (prefers-color-scheme: dark)
+and (hover: hover){
+  a:hover {
+    background-color: hsla(209, 100%, 58%, 0.2);
   }
 }
 
